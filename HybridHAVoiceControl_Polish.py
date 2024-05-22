@@ -51,7 +51,7 @@ commands = {
     (("zamknij",), ("drzwi", "drzwi frontowe")): "homeassistant/lock/1/lock",
 }
 
-def send_to_ha(topic, message, user="Arczi", password="lukasek"):
+def send_to_ha(topic, message, user="<user>", password="<your password>"):
     print(f'\033[92m{topic}\033[0m')  # Print topic in green color
     os.system(f'mosquitto_pub -h 192.168.1.199 -t "{topic}" -m "{message}" -u "{user}" -P "{password}"')
 
